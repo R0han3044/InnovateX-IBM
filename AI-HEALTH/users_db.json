@@ -1,0 +1,28 @@
+{
+    "users": [
+        {
+            "username": "admin",
+            "password": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+            "role": "admin",
+            "name": "System Administrator",
+            "email": "admin@healthassist.ai",
+            "created_at": "2025-05-21 10:36:41.731948"
+        },
+        {
+            "username": "doctor",
+            "password": "f348d5628621f3d8f59c8cabda0f8eb0aa7e0514a90be7571020b1336f26c113",
+            "role": "doctor",
+            "name": "Dr. John Smith",
+            "email": "doctor@healthassist.ai",
+            "created_at": "2025-05-21 10:36:41.731961"
+        },
+        {
+            "username": "patient",
+            "password": "d4587ea9ead060c13fd994f21ecfa7926272a78854a2c20136b10a3c9e53e71e",
+            "role": "patient",
+            "name": "Jane Doe",
+            "email": "patient@healthassist.ai",
+            "created_at": "2025-05-21 10:36:41.731965"
+        }
+    ]
+}

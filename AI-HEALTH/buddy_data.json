@@ -1,0 +1,15 @@
+{
+    "users": {
+        "patient": {
+            "name": "Nursey",
+            "created_at": "2025-05-21 10:53:12.841749",
+            "personality": "motivational",
+            "streak": 0,
+            "last_interaction": "2025-05-21 10:53:12.841765",
+            "health_goals": [],
+            "reminders": [],
+            "achievements": [],
+            "messages": []
+        }
+    }
+}
