@@ -202,23 +202,25 @@ def show_wellness_charts(wellness_data):
 def show_ai_insights(wellness_data):
     """Generate and display AI insights"""
     st.markdown("---")
-    st.subheader("🤖 AI Wellness Insights")
+    st.subheader("AI Wellness Insights")
     
-    if not st.session_state.model_manager:
+    if not st.session_state.model_loaded:
         st.info("AI model not loaded. Load the model to get personalized insights.")
         return
     
-    if st.button("🔮 Generate AI Insights", type="primary"):
-        with st.spinner("🤖 Analyzing your wellness data..."):
+    if st.button("Generate AI Insights", type="primary"):
+        with st.spinner("Analyzing your wellness data..."):
             try:
                 # Prepare wellness data summary
                 data_summary = prepare_wellness_summary(wellness_data)
                 
-                # Get AI insights
-                insights = st.session_state.model_manager.wellness_insights(data_summary)
+                # Get AI insights using demo model
+                from utils.model_utils_demo import DemoModelManager
+                demo_model = DemoModelManager()
+                insights = demo_model.wellness_insights(data_summary)
                 
                 # Display insights
-                st.success("✨ AI Insights Generated")
+                st.success("AI Insights Generated")
                 st.write(insights)
                 
                 # Save insights

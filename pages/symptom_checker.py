@@ -150,10 +150,12 @@ def analyze_symptoms(primary_symptoms, duration, severity, age_group, medical_co
         patient_info += f"\n- Additional info: {additional_info}"
     
     # Show analysis loading
-    with st.spinner("🔍 Analyzing symptoms with AI..."):
+    with st.spinner("Analyzing symptoms with AI..."):
         try:
-            # Get AI analysis
-            analysis = st.session_state.model_manager.symptom_analysis(
+            # Get AI analysis using demo model
+            from utils.model_utils_demo import DemoModelManager
+            demo_model = DemoModelManager()
+            analysis = demo_model.symptom_analysis(
                 primary_symptoms,
                 patient_info
             )
@@ -169,14 +171,16 @@ def analyze_symptoms(primary_symptoms, duration, severity, age_group, medical_co
 
 def quick_symptom_check(symptoms):
     """Quick symptom analysis for common issues"""
-    with st.spinner("🔍 Quick analysis..."):
+    with st.spinner("Quick analysis..."):
         try:
-            analysis = st.session_state.model_manager.symptom_analysis(symptoms)
+            from utils.model_utils_demo import DemoModelManager
+            demo_model = DemoModelManager()
+            analysis = demo_model.symptom_analysis(symptoms)
             
-            st.subheader("🎯 Quick Analysis Results")
+            st.subheader("Quick Analysis Results")
             st.write(analysis)
             
-            st.info("💡 For a more detailed analysis, use the full symptom checker form above.")
+            st.info("For a more detailed analysis, use the full symptom checker form above.")
             
         except Exception as e:
             st.error(f"Error in quick analysis: {str(e)}")

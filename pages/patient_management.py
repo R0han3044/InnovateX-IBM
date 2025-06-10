@@ -168,17 +168,19 @@ def show_patient_records(health_manager):
         st.line_chart(chart_data.set_index('Date'))
     
     # AI Analysis (if model is loaded)
-    if st.session_state.model_loaded and st.session_state.model_manager:
-        st.subheader("🤖 AI Patient Analysis")
+    if st.session_state.model_loaded:
+        st.subheader("AI Patient Analysis")
         
-        if st.button("🔍 Generate Patient Analysis"):
+        if st.button("Generate Patient Analysis"):
             with st.spinner("Analyzing patient data..."):
                 try:
                     # Prepare patient data summary
                     patient_summary = prepare_patient_summary(records, wellness_data)
                     
-                    # Get AI analysis
-                    analysis = st.session_state.model_manager.wellness_insights(patient_summary)
+                    # Get AI analysis using demo model
+                    from utils.model_utils_demo import DemoModelManager
+                    demo_model = DemoModelManager()
+                    analysis = demo_model.wellness_insights(patient_summary)
                     
                     st.success("Analysis Complete")
                     st.write(analysis)

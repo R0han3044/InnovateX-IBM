@@ -8,15 +8,17 @@ def show_chat_page():
     
     # Check if model is loaded
     if not st.session_state.model_loaded or not st.session_state.model_manager:
-        st.error("🤖 AI Model not loaded. Please load the model from the main page.")
-        if st.button("🔄 Go to Main Page"):
+        st.error("AI Model not loaded. Please load the model from the main page.")
+        if st.button("Go to Main Page"):
             st.session_state.authenticated = False
             st.rerun()
         return
     
     # Model info
-    with st.expander("🔧 Model Information"):
-        model_info = st.session_state.model_manager.get_model_info()
+    with st.expander("Model Information"):
+        from utils.model_utils_demo import DemoModelManager
+        demo_model = DemoModelManager()
+        model_info = demo_model.get_model_info()
         for key, value in model_info.items():
             st.write(f"**{key.replace('_', ' ').title()}:** {value}")
     
@@ -116,10 +118,12 @@ def handle_user_input(user_input):
     })
     
     # Show loading spinner
-    with st.spinner("🤖 HealthAssist AI is thinking..."):
+    with st.spinner("HealthAssist AI is thinking..."):
         try:
-            # Generate response using the model manager
-            response = st.session_state.model_manager.health_chat_response(
+            # Generate response using demo model
+            from utils.model_utils_demo import DemoModelManager
+            demo_model = DemoModelManager()
+            response = demo_model.health_chat_response(
                 user_input,
                 st.session_state.chat_history
             )

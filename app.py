@@ -185,11 +185,8 @@ def main_app():
         
         # System info
         with st.expander("System Info"):
-            if torch.cuda.is_available():
-                st.write(f"🔥 GPU: {torch.cuda.get_device_name(0)}")
-                st.write(f"💾 GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.1f} GB")
-            else:
-                st.write("💻 Running on CPU")
+            st.write("Running on CPU")
+            st.write("Ready for AI model loading")
         
         # Logout
         if st.button("🚪 Logout"):
