@@ -1,4 +1,13 @@
 import streamlit as st
+
+# Set page configuration first before any other Streamlit commands
+st.set_page_config(
+    page_title="HealthAssist AI",
+    page_icon="🏥",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 import os
 import json
 from datetime import datetime
@@ -7,13 +16,6 @@ import sys
 # Import utility modules
 from utils.auth_utils import AuthManager
 from utils.health_data import HealthDataManager
-
-# Page imports
-import pages.chat as chat_page
-import pages.symptom_checker as symptom_page
-import pages.wellness_dashboard as wellness_page
-import pages.patient_management as patient_page
-import pages.notifications as notifications_page
 
 def initialize_session_state():
     """Initialize session state variables"""
@@ -148,6 +150,13 @@ def load_model():
 
 def main_app():
     """Main application interface"""
+    # Import page modules here to avoid early Streamlit calls
+    import pages.chat as chat_page
+    import pages.symptom_checker as symptom_page
+    import pages.wellness_dashboard as wellness_page
+    import pages.patient_management as patient_page
+    import pages.notifications as notifications_page
+    
     # Sidebar navigation
     with st.sidebar:
         st.title("🏥 HealthAssist AI")
@@ -209,13 +218,6 @@ def main_app():
 
 def main():
     """Main application entry point"""
-    st.set_page_config(
-        page_title="HealthAssist AI",
-        page_icon="🏥",
-        layout="wide",
-        initial_sidebar_state="expanded"
-    )
-    
     # Initialize session state
     initialize_session_state()
     
