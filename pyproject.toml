@@ -5,6 +5,9 @@ description = "Add your description here"
 requires-python = ">=3.11"
 dependencies = [
     "streamlit>=1.45.1",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "plotly>=5.0.0",
 ]
 
 [[tool.uv.index]]

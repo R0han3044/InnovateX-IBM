@@ -159,15 +159,4 @@ def export_chat_history():
     
     return chat_text
 
-# Add export functionality
-if st.session_state.chat_history:
-    st.markdown("---")
-    if st.button("💾 Export Chat History"):
-        chat_text = export_chat_history()
-        if chat_text:
-            st.download_button(
-                label="📥 Download Chat History",
-                data=chat_text,
-                file_name=f"healthassist_chat_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt",
-                mime="text/plain"
-            )
+
