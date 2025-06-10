@@ -1,0 +1,40 @@
+{
+  "notifications": [
+    {
+      "id": "notif_1749577411",
+      "title": "Welcome to HealthAssist AI!",
+      "message": "Thank you for joining HealthAssist AI. Start by updating your wellness data to get personalized insights.",
+      "type": "success",
+      "created_at": "2025-06-10T23:13:31.646274",
+      "expires_at": "2025-06-11T23:13:31.646280",
+      "read": false
+    },
+    {
+      "id": "notif_1749577411",
+      "title": "Daily Wellness Check",
+      "message": "Don't forget to log your daily wellness metrics. Consistent tracking helps provide better AI insights.",
+      "type": "info",
+      "created_at": "2025-06-10T23:13:31.687191",
+      "expires_at": "2025-06-11T23:13:31.687198",
+      "read": false
+    },
+    {
+      "id": "notif_1749577411",
+      "title": "Hydration Reminder",
+      "message": "Remember to stay hydrated! Aim for 8 glasses of water throughout the day.",
+      "type": "info",
+      "created_at": "2025-06-10T23:13:31.704978",
+      "expires_at": "2025-06-11T23:13:31.704985",
+      "read": false
+    },
+    {
+      "id": "notif_1749577411",
+      "title": "AI Model Ready",
+      "message": "Your IBM Granite AI model is loaded and ready to assist with health questions and analysis.",
+      "type": "success",
+      "created_at": "2025-06-10T23:13:31.727721",
+      "expires_at": "2025-06-11T23:13:31.727733",
+      "read": false
+    }
+  ]
+}

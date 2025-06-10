@@ -1,3 +1,22 @@
 {
-  "records": []
+  "records": [
+    {
+      "type": "symptom_check",
+      "symptoms": "fever ,burning eyes",
+      "analysis": "**Symptom Analysis - Educational Information Only**\n\n**Symptoms Reported:** fever ,burning eyes\n\n**General Guidance:**\nBased on the symptoms you've described, here are some general considerations:\n\n\u2022 **Monitoring:** Keep track of when symptoms occur, their severity, and any triggers\n\u2022 **Self-Care:** Ensure adequate rest, hydration, and nutrition\n\u2022 **Documentation:** Maintain a symptom diary to share with healthcare providers\n\n**When to Seek Medical Attention:**\n\u2022 Symptoms worsen or don't improve within expected timeframes\n\u2022 New or concerning symptoms develop\n\u2022 You experience severe pain, difficulty breathing, or other emergency signs\n\n**Next Steps:**\n1. Continue monitoring your symptoms\n2. Consider scheduling an appointment with your healthcare provider\n3. Prepare a list of questions and symptom details for your visit\n\n**Important Disclaimer:**\nThis analysis is for informational purposes only and does not constitute medical diagnosis or treatment advice. Always consult qualified healthcare professionals for proper evaluation and care.\n\n**Additional Context Noted:** \n    Patient Information:\n    - Age group: 18-30\n    - Symptom duration: 1-3 days\n    - Severity: Mild\n    ",
+      "context": {
+        "age_group": "18-30",
+        "duration": "1-3 days",
+        "severity": "Mild",
+        "medical_conditions": "",
+        "medications": "",
+        "additional_info": ""
+      },
+      "timestamp": "2025-06-10T23:13:59.776612",
+      "username": "patient",
+      "record_id": "rec_1_1749577439",
+      "created_at": "2025-06-10T23:13:59.777089",
+      "updated_at": "2025-06-10T23:13:59.777094"
+    }
+  ]
 }
